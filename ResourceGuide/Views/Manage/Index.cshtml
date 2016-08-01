@@ -23,6 +23,13 @@
             }
             ]
         </dd>
+        <dt>TimeZone:</dt>
+        <dd>@Model.TimeZone 
+            [
+            @Html.ActionLink("Change your time zone", "ChangeTimeZone")
+            ]
+
+        </dd>
         <dt>External Logins:</dt>
         <dd>
             @Model.Logins.Count [
