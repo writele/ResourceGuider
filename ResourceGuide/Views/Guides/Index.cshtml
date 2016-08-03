@@ -41,7 +41,7 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ToUserTime(@item.Created)
+            @Html.ToUserTime(@item.Created, @item.Owner.TimeZone)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Updated)

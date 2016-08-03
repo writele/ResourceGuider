@@ -279,27 +279,6 @@ namespace ResourceGuide.Controllers
 
                 db.SaveChanges();
 
-                //var context = ControllerContext.HttpContext;
-                //context.GetOwinContext().Authentication.SignOut();
-                //await context.GetOwinContext().Get<ApplicationSignInManager>().SignInAsync(user, isPersistent: false, rememberBrowser: false);
-
-                //IDictionaryEnumerator enumerator = context.Cache.GetEnumerator();
-
-                //while (enumerator.MoveNext())
-                //{
-
-                //    HttpContext.Cache.Remove((string)enumerator.Key);
-
-                //}
-                Cache cache = HttpRuntime.Cache;
-
-                IDictionaryEnumerator dictionaryEnumerators = cache.GetEnumerator();
-
-                foreach (string key in (IEnumerable<string>)dictionaryEnumerators.Key)
-                {
-                    cache.Remove(key);
-                }
-                //System.Web.HttpRuntime.UnloadAppDomain();
                 return RedirectToAction("Index");
             }
             return RedirectToAction("ChangeTimeZone");

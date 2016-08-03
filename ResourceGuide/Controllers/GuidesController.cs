@@ -16,6 +16,7 @@ namespace ResourceGuide.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Guides
+        [Authorize]
         public ActionResult Index()
         {
             var guides = db.Guides.Include(g => g.Owner);
