@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ResourceGuide.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ResourceGuide.Controllers
 {
@@ -48,10 +49,12 @@ namespace ResourceGuide.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,OwnerId,Title,Description,Created,Updated")] Guide guide)
+        public ActionResult Create([Bind(Include = "Id,Title,Description")] Guide guide)
         {
             if (ModelState.IsValid)
             {
+                guide.OwnerId = User.Identity.GetUserId();
+                guide.Created = DateTimeOffset.UtcNow;
                 db.Guides.Add(guide);
                 db.SaveChanges();
                 return RedirectToAction("Index");

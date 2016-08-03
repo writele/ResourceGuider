@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ResourceGuide.Controllers
+namespace CustomHelpers
 {
     public static class CustomHTMLHelpers
     {
@@ -18,7 +18,7 @@ namespace ResourceGuide.Controllers
         public static IHtmlString ToUserTime(this HtmlHelper helper, DateTimeOffset ModelTime)
         {
 
-            var user = userManager.FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+            var user = userManager.FindById(HttpContext.Current.User.Identity.GetUserId());
             var userTimeZone = user.TimeZone;
             var timezoneId = TimeZoneInfo.FindSystemTimeZoneById(userTimeZone);
             var newTime = TimeZoneInfo.ConvertTime(ModelTime, timezoneId);

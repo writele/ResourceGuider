@@ -77,6 +77,6 @@
 \\Mac\Home\Web Development\Coder Foundry\ResourceGuide\ResourceGuide\bin\Microsoft.Owin.Security.Google.xml
 \\Mac\Home\Web Development\Coder Foundry\ResourceGuide\ResourceGuide\bin\Microsoft.Owin.Security.Twitter.xml
 \\Mac\Home\Web Development\Coder Foundry\ResourceGuide\ResourceGuide\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-\\Mac\Home\Web Development\Coder Foundry\ResourceGuide\ResourceGuide\obj\Debug\ResourceGuide.csprojResolveAssemblyReference.cache
 \\Mac\Home\Web Development\Coder Foundry\ResourceGuide\ResourceGuide\obj\Debug\ResourceGuide.dll
 \\Mac\Home\Web Development\Coder Foundry\ResourceGuide\ResourceGuide\obj\Debug\ResourceGuide.pdb
+\\Mac\Home\Web Development\Coder Foundry\ResourceGuide\ResourceGuide\obj\Debug\ResourceGuide.csprojResolveAssemblyReference.cache
